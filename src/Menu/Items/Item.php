@@ -150,7 +150,10 @@ class Item extends MenuObject
 
   public function hasChildren()
   {
-    return count($this->children->getChildren()) > 0;
+    if ( is_object($this->children) )
+    {
+      return count($this->children->getChildren()) > 0;
+    }
   }
 
   /**

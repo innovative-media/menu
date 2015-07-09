@@ -154,7 +154,7 @@ class ItemList extends MenuObject
     $item->setAttributes($itemAttributes);
 
     // Set Item as parent of its children
-    if (!is_null($children)) {
+    if ( is_object($children) ) {
       $children->setParent($item);
     }
 
